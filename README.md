@@ -7,4 +7,9 @@ first clone https://github.com/Inzamamulhaq01/Ecommerce_Task.git
 4) pip install -r requirements.txt
 5) python manage.py runserver (that's it)
 
+-----------------------------------------
+for admin:
+Username = admin
+pass = admin
+
 6) done by - Inzamam Ulhaq 
