@@ -22,9 +22,15 @@ for users login:
 
 
 for admin dashboard:
+
+
   http://127.0.0.1:8000/admin/
   Username = admin
   pass = admin
+
+  ![{29FE5DA8-B9E0-44EA-9E99-3E1737ECE5C3}](https://github.com/user-attachments/assets/bb382c75-20b4-497f-abc5-81654c52b2da)
+  To add products click Products
+
   
 
 
