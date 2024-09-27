@@ -14,11 +14,18 @@ Username = admin
 pass = admin
 
 for users login:
-username = user1
-pass = lead1234
+  username = user1
+  pass = lead1234
+  
+  username = user2
+  pass = lead1234
 
-username = user2
-pass = lead1234
+
+for admin dashboard:
+  http://127.0.0.1:8000/admin/
+  Username = admin
+  pass = admin
+  
 
 
 6) done by - Inzamam Ulhaq 
