@@ -13,4 +13,12 @@ for admin:
 Username = admin
 pass = admin
 
+for users login:
+username = user1
+pass = lead1234
+
+username = user2
+pass = lead1234
+
+
 6) done by - Inzamam Ulhaq 
