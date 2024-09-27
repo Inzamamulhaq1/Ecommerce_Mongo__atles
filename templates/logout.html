@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="content-section">
+ 
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Hello</legend>
+            <h4>You just logged out</h4>
+        </fieldset>
+        <div class="form-group">
+             <a href="{% url 'login' %}"> <button class="btn btn-outline-info"> Login Again </button></a> 
+        </div>
+   
+
+</div>
+{% endblock content %}
