@@ -66,12 +66,23 @@ def order_list(request):
 
 @login_required
 def order_summary(request):
+    # Retrieve all items in the user's cart
     cart_items = CartItem.objects.filter(user=request.user)
     total_price = sum(item.total_price for item in cart_items)
+
+    # Create an Order instance with the total price
     order = Order.objects.create(user=request.user, total_price=total_price)
     order.products.set(cart_items)
     order.save()
-    cart_items.delete()  # Clear the cart after creating the order
+
+    # Update the stock quantity of each product in the cart
+    for item in cart_items:
+        item.product.stock_quantity -= item.quantity
+        item.product.save()
+
+    # Clear the cart after creating the order
+    cart_items.delete()
+
     return render(request, 'order_summary.html', {'order': order})
 
 
