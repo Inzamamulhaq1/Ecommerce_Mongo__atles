@@ -1,6 +1,7 @@
 # Ecommerce_Task
 
-first clone https://github.com/Inzamamulhaq01/Ecommerce_Task.git
+clone the repo
+git clone https://github.com/Inzamamulhaq01/Ecommerce_Task.git
 1) move cd Ecommerce_Task
 2)  need to install environment in your Folder In cmd type (python -m venv venv)
 3) Activate venv type venv\Scripts\activate
