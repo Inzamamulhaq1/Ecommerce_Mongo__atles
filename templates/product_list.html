@@ -15,7 +15,11 @@
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description|slice:":100" }}...</p>
                         <p class="card-text"><strong>${{ product.price }}</strong></p>
+                        {% if product.stock_quantity > 0 %}
                         <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary mt-auto">View Details</a>
+                        {% else %}
+                            <button class="btn btn-secondary mt-auto">Out Of Stock</button>
+                        {% endif %}
                     </div>
                 </div>
             </div>
