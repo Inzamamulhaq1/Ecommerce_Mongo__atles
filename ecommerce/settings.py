@@ -86,11 +86,19 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'test1',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://nousemail00000:JU0nmkDhHaDNXVdf@cluster0.k8eui.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', # Replace with your MongoDB server address
+            'port': 27017,               # Replace with your MongoDB port if different
+            'username': 'nousemail00000', # Replace with your MongoDB username (optional)
+            'password': 'JU0nmkDhHaDNXVdf', # Replace with your MongoDB password (optional)
+            # 'authSource': 'SCRAM', # Replace with your MongoDB authentication database (optional)
+        },
+        
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
