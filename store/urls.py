@@ -15,7 +15,10 @@ urlpatterns = [
     path('login/',auth_views.LoginView.as_view(template_name='login.html'),name='login'),
     path('logout/', views.logoutView.as_view(),name='logout'),
     path('orders/', login_required(views.order_list), name='order_list'), 
+    path('order/<int:pk>/', login_required(views.singleOrder), name='order'), 
     path('register/',views.registerView.as_view(),name='register'),
+    path('remove-from-cart/<int:pk>/', views.remove_from_cart, name='remove_from_cart'),
+    
     
     
     

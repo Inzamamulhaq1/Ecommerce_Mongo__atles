@@ -17,6 +17,7 @@
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Total</th>
+                <th>Delete Item</th>
             </tr>
         </thead>
         <tbody>
@@ -26,12 +27,22 @@
                 <td>{{ item.quantity }}</td>
                 <td>${{ item.product.price }}</td>
                 <td>${{ item.total_price }}</td>
+                <td>
+                    <a href="{% url 'order' item.product.pk  %}"> <button  class="btn btn-primary">Order</button></a>
+                    <a href="{% url 'remove_from_cart' item.product.pk %}"><button  class="btn btn-danger">Remove</button></a>
+                </td>
+            
             </tr>
+            
             {% endfor %}
         </tbody>
     </table>
     {% endif %}
 
+
+    
     <h3>Total: ${{ total_price }}</h3>
+    {% if total_price %}
     <a href="{% url 'order_summary' %}" class="btn btn-primary">Proceed to Checkout</a>
+    {% endif %}
 {% endblock %}

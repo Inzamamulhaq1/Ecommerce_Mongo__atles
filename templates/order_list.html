@@ -3,30 +3,38 @@
 
 
 
-    <h2>Your Orders</h2>
+<h2>Your Orders</h2>
+
 {% for order in orders %}
-    <div class="order">
-        <h3>Order ID: {{ order.id }}</h3>
-        <p>Date: {{ order.date_ordered }}</p>
-        <p>Total Price: ${{ order.total_price }}</p>
-        
-        <div class="product-list">
-            {% for item in order.products.all %}
-                <div class="product-item">
-                    <img src="{{ item.products.image.url }}" alt="{{ item.product.name }}" style="width: 100px; height: auto;">
-                    <div>
-                        <p><strong>{{ item.product.name }}</strong></p>
-                        <p>Quantity: {{ item.quantity }}</p>
-                        <p>Price: ${{ item.total_price }}</p>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <hr>
-{% empty %}
-    <p>You have not placed any orders yet.</p>
+  <h3>Order ID: {{ order.id }} - Total Price: ${{ order.total_price }}</h3>
+  <hr>
+ 
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in order.products.all %}
+        <tr>
+          <td>
+            
+            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" width="100">
+          </td>
+          <td>{{ item.product.name }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>${{ item.total_price }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table> -->
+
 {% endfor %}
+
 
 {% endblock content%}
 
