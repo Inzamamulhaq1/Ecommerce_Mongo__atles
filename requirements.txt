@@ -6,7 +6,6 @@ django-crispy-forms
 djangotoolbox
 djongo
 dnspython
-mysqlclient
 pillow
 pymongo
 python-snappy
